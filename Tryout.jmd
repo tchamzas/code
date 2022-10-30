@@ -1,0 +1,40 @@
+---
+title: Tacrolimus Base Model Building 
+author: Athanasios Chamzas
+date: 8/23/2022
+---
+
+```julia
+begin 
+    using Pumas
+    using PumasUtilities
+    using CSV
+    using Random
+    using DataFrames 
+    using DataFramesMeta
+    using CairoMakie
+    using Chain
+    using StatsBase
+    using CategoricalArrays
+    using Dates
+    using Serialization 
+    using Bioequivalence.GLM: lm, @formula
+    using Pumas.Latexify
+    using AlgebraOfGraphics
+  end
+
+```
+#### Reading data ###
+ena duo
+```julia
+pkdata = CSV.read("/home/jrun/data/code/Pumas/Tacrolimus Project/4.Data_Formatting/pkdata_combined_with_scr.csv",DataFrame,missingstring="")
+```
+
+
+
+                                              
+#                One Stage:                    
+#         Base Model Development              
+
+
+ONE COMPARTMENT MODEL, 1ST ORDER ABSORPTION, 1ST ORDER ELIMINATION 
