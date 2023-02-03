@@ -1,6 +1,6 @@
 cd Pumas
-git add .; git commit -m "Update 10/25"; git push
+git add .; git commit -m "precidex simulations "; git push
 
 
 
-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
+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
