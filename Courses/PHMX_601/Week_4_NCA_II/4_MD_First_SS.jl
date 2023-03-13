@@ -25,7 +25,7 @@ using DataFramesMeta
 #################### OPTION #1 ####################
 
 # Load Data
-df_oral_first_ss = CSV.read("data/oral_md_first_ss.csv", DataFrame, missingstring=["NA", ".", ""])
+df_oral_first_ss = CSV.read("/home/jrun/data/code/Courses/PHMX_601/Week_4_NCA_II/Data_Week4/oral_md_ss_only.csv", DataFrame, missingstring=["NA", ".", ""])
 
 
 
@@ -45,8 +45,6 @@ pop_oral_first_ss = read_nca(df_oral_first_ss,
 # Preview Data 
 ## individual plot - linear scale 
 obsvstimes = observations_vs_time(pop_oral_first_ss[1])
-
-
 
 
 
@@ -98,7 +96,7 @@ report(nca_oral_first_ss_report, param_summary_oral_first_ss)
 ######################## option #2 ##############################
 
 # Load Data
-df_oral_first_ss = CSV.read("data/oral_md_first_ss.csv", DataFrame, missingstring=["NA", ".", ""])
+df_oral_first_ss = CSV.read("/home/jrun/data/code/Courses/PHMX_601/Week_4_NCA_II/Data_Week4/oral_md_ss_only.csv", DataFrame, missingstring=["NA", ".", ""])
 
 
 # Data wrangle 
@@ -107,8 +105,9 @@ df_oral_first_ss = @chain df_oral_first_ss begin
     groupby(_, [:id]) 
     transform(_, :evid => (x -> cumsum(x)) => :occ)
   end
-  
 
+
+  
 # Map Dataframe to NCA Population
 pop_oral_first_ss = read_nca(df_oral_first_ss,
                 id            = :id,

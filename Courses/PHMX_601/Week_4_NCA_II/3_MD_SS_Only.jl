@@ -23,7 +23,7 @@ using CairoMakie
 
 
 # Load Data
-df_oral_ss = CSV.read("data/oral_md_ss_only.csv", DataFrame, missingstring=["NA", ".", ""])
+df_oral_ss = CSV.read("/home/jrun/data/code/Courses/PHMX_601/Week_4_NCA_II/Data_Week4/oral_md_ss_only.csv", DataFrame, missingstring=["NA", ".", ""])
 
 
 
@@ -86,7 +86,7 @@ nca_oral_ss = run_nca(pop_oral_ss, sigdigits=3)
 
 
 # Generate Individual NCA Parameters 
-vz        = NCA.vz(pop_oral_ss, sigdigits=3)  # Volume of Distribution/F, in this case since the drug is given orally
+vz        = NCA.vz(pop_oral_ss, sigdigit=3)  # Volume of Distribution/F, in this case since the drug is given orally
 cl        = NCA.cl(pop_oral_ss, sigdigits=3)  # Clearance/F, in this case since the drug is given orally
 lambdaz   = NCA.lambdaz(pop_oral_ss, threshold=3, sigdigits=3)  # Terminal Elimination Rate Constant, threshold=3 specifies the max no. of time point used for calculation
 thalf     = NCA.thalf(pop_oral_ss, sigdigits=3) # Half-life calculation 

@@ -21,7 +21,7 @@ using CairoMakie
 
 
 # Load Data
-df_inf_sd = CSV.read("data/iv_infusion_sd.csv", DataFrame, missingstring=["NA", ".", ""])
+df_inf_sd = CSV.read("/home/jrun/data/code/Courses/PHMX_601/Week_4_NCA_II/Data_Week4/iv_infusion_sd.csv", DataFrame, missingstring=["NA", ".", ""])
 
 
 
@@ -95,7 +95,7 @@ nca_inf_sd = run_nca(pop_inf_sd, sigdigits=3)
 
 # Clearance (CL=dose/AUC)
 ## L/hr 
-cl        = NCA.cl(pop_inf_sd, sigdigits=3)  
+cl        = NCA.cl(pop_inf_sd)  
 
 
 # Volume of distribution during the elimination phase (Vz=Dose/(λz*AUC))

@@ -20,7 +20,7 @@ using CairoMakie
 
 
 # Load Data
-df_bolus_sd = CSV.read("data/iv_bolus_sd.csv", DataFrame, missingstring=["NA", ".", ""])
+df_bolus_sd = CSV.read("/home/jrun/data/code/Courses/PHMX_601/Week_4_NCA_II/Data_Week4/iv_bolus_sd (2).csv", DataFrame, missingstring=["NA", ".", ""])
 
 
 
@@ -62,17 +62,11 @@ summary_observations_vs_time(pop_bolus_sd,
                                 ylabel = "Drug Concentration (mg/L)"))
 #
 
-
 # plot means - semilog scale 
 sp_log = summary_observations_vs_time(pop_bolus_sd, 
                                   axis = (xlabel = "Time (hour)", 
                                   ylabel = "Drug Concentration (mg/L)",
-                                  yscale = Makie.pseudolog10, # error bars require pseudo
-                                  columns = 2, rows = 3,
-                                  plot_resolution = (600, 1000)))  
-
-
-
+                                  yscale = Makie.pseudolog10)) # error bars require pseudo
 
 
 # Perform Simple NCA

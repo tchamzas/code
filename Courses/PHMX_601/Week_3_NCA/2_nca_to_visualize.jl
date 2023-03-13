@@ -23,7 +23,7 @@ using CairoMakie
 
 
 # Load Data
-df = CSV.read("iv_bolus_sd(1).csv", DataFrame, missingstring=["NA", ".", ""])
+df = CSV.read("/home/jrun/data/code/Courses/PHMX_601/Week_3_NCA/iv_bolus_sd(1).csv", DataFrame, missingstring=["NA", ".", ""])
 
 
 
@@ -111,4 +111,4 @@ ot_log[1]
 
 
 # To get an introduction to NCA (next lecture series) - review the following tutorial: 
-# https://tutorials.pumas.ai/html/nca/nca_introduction.html
+# https://tutorials.pumas.ai/html/nca/nca_introduction.html 

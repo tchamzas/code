@@ -1,5 +1,5 @@
 cd Pumas
-git add .; git commit -m "precidex simulations "; git push
+git add .; git commit -m "APAP study Design "; git push
 
 
 
