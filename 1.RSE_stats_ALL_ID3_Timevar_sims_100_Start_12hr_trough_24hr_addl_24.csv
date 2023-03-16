@@ -1,0 +1,7 @@
+Parameter,No_Subject,Perc_Success,n_RSE_below_20,n_of_sims,Failed_Sims
+cl_t0,40,90.0,90,100,8
+decay_const,40,36.0,36,100,8
+tvcl,40,92.0,92,100,8
+tvq,40,83.0,83,100,8
+tvvc,40,88.0,88,100,8
+tvvp,40,81.0,81,100,8

@@ -1,9 +1,0 @@
-Parameter,No_Subject,Perc_Success,n_RSE_below_20,n_of_sims,Failed_Sims
-tvcl,20,64.2,321,500,69
-tvcl,30,62.8,314,500,70
-tvcl,40,74.8,374,500,48
-tvcl,50,76.2,381,500,51
-tvvc,20,50.0,250,500,69
-tvvc,30,65.0,325,500,70
-tvvc,40,75.6,378,500,48
-tvvc,50,81.2,406,500,51
